@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #f3ec78, #af4261); /* Vibrant Gradient */
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Start Screen */
+#start-screen {
+    text-align: center;
+}
+
+#start-btn, #pause-btn, #restart-btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #ffeb3b; /* Yellow */
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+#start-btn:hover, #pause-btn:hover, #restart-btn:hover {
+    background-color: #fdd835; /* Darker Yellow */
+}
+
+/* Game Container */
+#game-container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Game Border */
+#game-board {
+    background-color: #e0f7fa; /* Light cyan */
+    border: 3px solid #333; /* Reduced border thickness */
+    width: 100%;
+    height: 650px; /* Increased height */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Added shadow for polished look */
+}
+
+/* Game Controls */
+#game-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.control-btn {
+    padding: 15px 25px; /* Uniform padding for all buttons */
+    font-size: 20px;
+    background-color: #ffd700; /* Yellow color */
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.control-btn:active {
+    transform: scale(0.9); /* Slight shrink effect on click */
+}
+
+/* Equal size for all control buttons */
+#up-btn, #down-btn, #left-btn, #right-btn {
+    padding: 20px; /* Same size for all control buttons */
+    font-size: 24px; /* Consistent font size */
+}
+
+#up-btn {
+    margin-bottom: 10px; /* Adds space below the up button */
+}
+
+/* Adjusted styling for directional buttons */
+#left-btn,
+#down-btn,
+#right-btn {
+    margin: 0 10px;
+}
+
+/* Game Over Modal */
+#game-over-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid #333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+#modal-content h2 {
+    margin: 0 0 20px 0;
+    color: #333;
+}
+
+/* Food Animation */
+.food-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    animation: pulse 0.5s ease-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
